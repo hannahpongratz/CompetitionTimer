@@ -103,12 +103,12 @@ function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
     const menuBtn = document.getElementById('menuBtn');
     sidebar.classList.toggle('hidden');
-    menuBtn.innerText = sidebar.classList.contains('hidden') ? "☰ Settings" : "✕ Close";
+    menuBtn.innerText = sidebar.classList.contains('hidden') ? "☰ Einstellungen" : "✕ Schließen";
 }
 
 function updateRoundLabel() {
     const total = parseInt(document.getElementById('roundsInput').value);
-    document.getElementById('roundLabel').innerText = `ROUND ${currentRound}` + (total > 0 ? ` / ${total}` : "");
+    document.getElementById('roundLabel').innerText = `Runde ${currentRound}` + (total > 0 ? ` / ${total}` : "");
 }
 
 function startNew() {

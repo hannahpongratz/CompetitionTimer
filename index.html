@@ -9,7 +9,7 @@
 <body>
 
     <div id="sidebar" class="sidebar">
-        <h2>SETTINGS</h2>
+        <h2>Einstellungen</h2>
         
         <div class="setting-group">
             <label>Minuten pro Intervall:</label>
@@ -28,26 +28,27 @@
 
         <hr>
         <h3>ODER</h3>
+        <hr>
 
         <div class="setting-group">
-            <label>Join Session (CODE):</label>
-            <input type="text" id="joinCodeInput" placeholder="ENTER CODE">
+            <label>Synchronisieren (CODE):</label>
+            <input type="text" id="joinCodeInput" placeholder="CODE EINGEBEN">
         </div>
         <button class="sync-btn" onclick="joinSession()">SYNC & START</button>
     </div>
 
-    <button id="menuBtn" onclick="toggleMenu()">✕ Close</button>
+    <button id="menuBtn" onclick="toggleMenu()">✕ Schließen</button>
 
     <div id="main">
         <div class="top-bar">
-            <span id="roundLabel">ROUND 1</span>
+            <span id="roundLabel">Runde 1</span>
             <span id="syncLabel"></span>
         </div>
 
         <div id="timerDisplay">04:00</div>
 
         <div class="controls">
-            <button id="startBtn" onclick="startNew()">START NEW</button>
+            <button id="startBtn" onclick="startNew()">START</button>
             <button id="stopBtn" class="hidden" onclick="stopTimer()">STOP</button>
         </div>
     </div>
