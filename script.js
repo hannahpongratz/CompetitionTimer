@@ -226,7 +226,7 @@ function updateLoop() {
     
     // We use a unique key for the heartbeat to avoid conflicts with actual beeps
     const heartbeatKey = "hb_" + currentSecInt;
-    if (!scheduledBeeps.has(heartbeatKey) && currentSecInt >= 6) {
+    if (!scheduledBeeps.has(heartbeatKey) && currentSecInt >= 6 && currentSecInt != 60) {
         const targetTime = audioStartTime + (roundDuration - currentSecInt);
         
         // Play the silent heartbeat EVERY second
