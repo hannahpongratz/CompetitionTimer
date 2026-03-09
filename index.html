@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervall Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="sidebar" class="sidebar">
+        <h2>SETTINGS</h2>
+        
+        <div class="setting-group">
+            <label>Minuten pro Intervall:</label>
+            <input type="number" id="intervalInput" value="4" min="1" max="99">
+        </div>
+        
+        <div class="checkbox-group">
+            <input type="checkbox" id="changeInput" checked>
+            <label for="changeInput">15s Wechsel</label>
+        </div>
+
+        <div class="setting-group">
+            <label>Anzahl Runden (0=∞):</label>
+            <input type="number" id="roundsInput" value="0" min="0" max="99">
+        </div>
+
+        <hr>
+        <h3>ODER</h3>
+
+        <div class="setting-group">
+            <label>Join Session (CODE):</label>
+            <input type="text" id="joinCodeInput" placeholder="ENTER CODE">
+        </div>
+        <button class="sync-btn" onclick="joinSession()">SYNC & START</button>
+    </div>
+
+    <button id="menuBtn" onclick="toggleMenu()">✕ Close</button>
+
+    <div id="main">
+        <div class="top-bar">
+            <span id="roundLabel">ROUND 1</span>
+            <span id="syncLabel"></span>
+        </div>
+
+        <div id="timerDisplay">04:00</div>
+
+        <div class="controls">
+            <button id="startBtn" onclick="startNew()">START NEW</button>
+            <button id="stopBtn" class="hidden" onclick="stopTimer()">STOP</button>
+        </div>
+    </div>
+
+
+    <script src="sounds.js"></script>
+    <script src="script.js"></script>
+	
+</body>
+</html>
